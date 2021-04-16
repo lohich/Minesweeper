@@ -1,0 +1,13 @@
+input{
+    margin: 2px;
+}
+
+:host{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu{
+    margin: auto;
+}

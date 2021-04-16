@@ -1,0 +1,76 @@
+button{
+    --size: 30px;
+    height: var(--size);
+    width: var(--size);
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    background-color: blue;
+    font-size: calc(var(--size) - var(--size) * 0.5);
+    box-sizing: border-box;
+}
+
+.row{
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+.fieldContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opened{
+    background-color: lightgray;
+}
+
+.flagged{
+    background-image: url("/flag.png");
+    background-size: 70% 70%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.bomb{
+    background-image: url("/bomb.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.one{
+    color: blue;
+}
+
+.two{
+    color: limegreen;
+}
+
+.three{
+    color: red;
+}
+
+.four{
+    color: brown;
+}
+
+.five{
+    color: cyan;
+}
+
+.six{
+    color: darkorange;
+}
+
+.seven{
+    color: darkorchid;
+}
+
+.eight{
+    color: gold;
+}
+
+.nine{
+    color: green;
+}

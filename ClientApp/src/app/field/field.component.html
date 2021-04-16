@@ -1,0 +1,22 @@
+<div class="fieldContainer">
+    <div>Bombs: {{Field.BombCount}}</div>
+    <div *ngFor="let row of Field.Field; let y = index" class="row">
+        <button *ngFor="let item of row; let x = index" [ngClass]="{
+                opened: item.Status == 1, 
+                flagged: item.Status == 2, 
+                bomb: item.Status == 3,
+                one: item.Number == 1,
+                two: item.Number == 2,
+                three: item.Number == 3,
+                four: item.Number == 4,
+                five: item.Number == 5,
+                six: item.Number == 6,
+                seven: item.Number == 7,
+                eight: item.Number == 8,
+                nune: item.Number == 9
+            }" (click)="Open(x,y)" (contextmenu)="Flag(x,y)" [disabled]="Field.Result == 1 || Field.Result == 2"
+            (dblclick)="OpenAll(x,y)">{{item.Number !== 0 ? item.Number : ''}}</button>
+    </div>
+</div>
+<div *ngIf="Field.Result == 1">You Win!</div>
+<div *ngIf="Field.Result == 2">You Lose!</div>

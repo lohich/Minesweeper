@@ -1,0 +1,8 @@
+<div class="menu">
+    <input type="number" placeholder="Count x" [(ngModel)]="StartParams.CountX">
+    <input type="number" placeholder="Count y" [(ngModel)]="StartParams.CountY">
+    <input type="number" placeholder="Bomb count" [(ngModel)]="StartParams.BombCount">
+    <button (click)="Start()">Start</button>
+</div>
+
+<app-field [Field]="Field" *ngIf="Field"></app-field>
